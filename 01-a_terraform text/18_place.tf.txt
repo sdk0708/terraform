@@ -1,0 +1,4 @@
+resource "aws_placement_group" "tf_place" {
+  name     = "tf-place"
+  strategy = "cluster"
+}

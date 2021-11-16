@@ -1,0 +1,9 @@
+resource "aws_route_table_association" "tf_rtas_a"{
+  subnet_id = aws_subnet.tf_puba.id
+  route_table_id = aws_route_table.tf_rf.id
+  }
+
+  resource "aws_route_table_association" "tf_rtas_c"{
+  subnet_id = aws_subnet.tf_pubc.id
+  route_table_id = aws_route_table.tf_rf.id
+  }

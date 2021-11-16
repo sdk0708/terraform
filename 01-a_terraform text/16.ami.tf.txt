@@ -1,0 +1,12 @@
+resource "aws_ami_from_instance" "tf_ami" {
+  name               = "tf-aws-ami"
+  source_instance_id = aws_instance.tf_weba.id
+
+  depends_on = [
+    aws_instance.tf_weba
+  ]
+
+  tags = {
+    "Name" = "tf-ami"
+  }
+}

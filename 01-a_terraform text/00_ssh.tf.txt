@@ -1,0 +1,4 @@
+resource "aws_key_pair" "tf_key" {
+  key_name = "tf-key-pair-1"
+  public_key = file("../../.ssh/tf-key-pair.pub")
+}

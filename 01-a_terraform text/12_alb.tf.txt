@@ -1,0 +1,15 @@
+resource "aws_lb" "tf_alb" {
+ name               = "tf-alb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.tf_sg.id]
+  subnets            = [aws_subnet.tf_pub[0].id, aws_subnet.tf_pub[1].id] # loadbalancer가 사용할 public zone
+
+  tags = {
+    "Name" = "tf-alb"
+  }
+}
+
+output "alb_dns" {
+  value = aws_lb.tf_alb.dns_name
+}

@@ -1,0 +1,5 @@
+resource "aws_lb_target_group_attachment" "tf_tgatt" {
+  target_group_arn = aws_lb_target_group.tf_albtg.arn
+  target_id        = aws_instance.tf_weba.id
+  port             = 80
+}

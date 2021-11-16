@@ -1,0 +1,53 @@
+resource "aws_subnet" "tf_puba"{
+vpc_id = aws_vpc.tf_vpc.id
+  cidr_block = "10.0.0.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+  "Name"="tf-puba"
+  }
+}
+
+resource "aws_subnet" "tf_pria"{
+vpc_id = aws_vpc.tf_vpc.id
+  cidr_block = "10.0.1.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+  "Name"="tf-pria"
+  }
+}
+
+resource "aws_subnet" "tf_pubc"{
+vpc_id = aws_vpc.tf_vpc.id
+  cidr_block = "10.0.2.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+  "Name"="tf-pubc"
+  }
+}
+
+resource "aws_subnet" "tf_pric"{
+vpc_id = aws_vpc.tf_vpc.id
+  cidr_block = "10.0.3.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+  "Name"="tf-pric"
+  }
+}
+
+resource "aws_subnet" "tf_pridba"{
+vpc_id = aws_vpc.tf_vpc.id
+  cidr_block = "10.0.4.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+  "Name"="tf-pridba"
+  }
+}
+
+resource "aws_subnet" "tf_pridbc"{
+vpc_id = aws_vpc.tf_vpc.id
+  cidr_block = "10.0.5.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+  "Name"="tf-pridbc"
+  }
+}
